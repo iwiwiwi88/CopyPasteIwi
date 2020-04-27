@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.iwi.copypaste.controllers.MainController"
+            prefWidth="500.0">
+
+    <top>
+
+        <VBox>
+            <HBox spacing="5" alignment="CENTER" prefHeight="15" prefWidth="490">
+                <Label text="Button name:" prefWidth="80"/>
+                <TextField prefWidth="280"/>
+                <Button text="Add" prefWidth="60"/>
+                <Button text="Clear" prefWidth="60"/>
+            </HBox>
+            <Label text=" Text to be coppied:" prefWidth="300"/>
+            <HBox spacing="5" alignment="CENTER" prefHeight="20" prefWidth="490">
+                <TextArea prefWidth="490" prefHeight="100"/>
+            </HBox>
+
+            <Separator maxWidth="490" minHeight="10"/>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="5" alignment="CENTER" prefHeight="20" prefWidth="490">
+            <Label text=" Here will be the buttons field" prefWidth="300"/>
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox>
+            <Separator maxWidth="490" minHeight="10"/>
+
+            <HBox spacing="5" alignment="CENTER" prefHeight="40" prefWidth="490">
+                <Label text=" Edit text:" prefWidth="100"/>
+                <Button text="Copy" prefWidth="60"/>
+                <Button text="Clear" prefWidth="60"/>
+            </HBox>
+            <HBox spacing="5" alignment="CENTER" prefHeight="40" prefWidth="490">
+                <TextArea prefWidth="490" prefRowCount="4"/>
+            </HBox>
+
+            <Separator maxWidth="490" minHeight="10"/>
+        </VBox>
+    </bottom>
+</BorderPane>
