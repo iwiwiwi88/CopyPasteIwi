@@ -1,4 +1,4 @@
-package com.iwi.copypaste.controllers;
+package pl.iwi.copypaste.controllers;
 
 public class ButtonsFieldController {
 }

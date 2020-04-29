@@ -1,4 +1,4 @@
-package com.iwi.copypaste;
+package pl.iwi.copypaste;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
