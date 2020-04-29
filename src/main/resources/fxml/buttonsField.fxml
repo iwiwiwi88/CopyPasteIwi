@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pl.iwi.copypaste.controllers.ButtonsFieldController"
+      fx:id="buttonsFieldPane"
+      id="buttonsFieldPane"
+      spacing="5"
+      alignment="CENTER"
+      prefHeight="20"
+      prefWidth="490">
+    <Label text=" Here will be the buttons field" prefWidth="300"/>
+</VBox>

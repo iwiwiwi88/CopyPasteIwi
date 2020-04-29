@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application {
 
@@ -21,7 +22,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         this.stage = primaryStage;
 
-        Parent root = FXMLLoader.load(getClass().getResource("ui.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml/main.fxml")));
         this.stage.setScene(new Scene(root));
         this.stage.setTitle("CopyPasteIwi");
         setSize();

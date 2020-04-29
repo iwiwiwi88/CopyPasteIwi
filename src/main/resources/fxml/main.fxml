@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pl.iwi.copypaste.controllers.MainController"
+            id="mainPane"
+            prefWidth="500.0">
+
+    <top>
+        <fx:include source="addButton.fxml"/>
+    </top>
+
+    <center>
+        <fx:include source="buttonsField.fxml"/>
+    </center>
+
+    <bottom>
+        <fx:include source="editText.fxml"/>
+    </bottom>
+</BorderPane>
