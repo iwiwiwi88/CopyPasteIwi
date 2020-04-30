@@ -5,8 +5,7 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="pl.iwi.copypaste.controllers.MainController"
-            id="mainPane"
-            prefWidth="500.0">
+            id="mainPane">
 
     <top>
         <fx:include source="addButton.fxml"/>
