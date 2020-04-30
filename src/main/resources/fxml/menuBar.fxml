@@ -8,7 +8,6 @@
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="pl.iwi.copypaste.controllers.MenuBarController"
         fx:id="menuBar"
-        id="menuBar"
-        prefWidth="500.0">
+        id="menuBar">
     <TextField text="Menu Bar"></TextField>
 </BorderPane>
