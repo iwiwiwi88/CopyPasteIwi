@@ -9,8 +9,6 @@
       fx:id="buttonsFieldPane"
       id="buttonsFieldPane"
       spacing="5"
-      alignment="CENTER"
-      prefHeight="20"
-      prefWidth="490">
+      alignment="CENTER">
     <Label text=" Here will be the buttons field" prefWidth="300"/>
 </VBox>
