@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="pl.iwi.copypaste.controllers.MainController"
       fx:id="addButtonPane"
       id="addButtonPane"
-      prefWidth="500.0">
+      alignment="CENTER">
 
-    <HBox spacing="5" alignment="CENTER" prefHeight="15" prefWidth="490">
-        <Label text="Button name:" prefWidth="80"/>
-        <TextField prefWidth="280"/>
+    <HBox spacing="5" minHeight="40" prefWidth="480" alignment="CENTER">
+        <TextField prefWidth="300" promptText="Text on button (up to 40 signs)" />
         <Button text="Add" prefWidth="60"/>
         <Button text="Clear" prefWidth="60"/>
     </HBox>
-    <Label text=" Text to be copied:" prefWidth="300"/>
-    <HBox spacing="5" alignment="CENTER" prefHeight="20" prefWidth="490">
-        <TextArea prefWidth="490" prefHeight="100"/>
+    <HBox minHeight="100" prefWidth="480" alignment="CENTER">
+        <TextArea prefWidth="480" prefHeight="100" promptText="Text to be copied..."/>
     </HBox>
 
-    <Separator maxWidth="490" minHeight="10"/>
+    <Separator maxWidth="480" minHeight="10"/>
 </VBox>
 
