@@ -29,6 +29,7 @@ public class App extends Application {
 
         this.stage.setScene(new Scene(root));
         this.stage.setTitle("CopyPasteIwi");
+        this.stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/iwi_icon.png")));
         setSize();
         pinWindow(true);
 
