@@ -16,6 +16,7 @@ public class App extends Application {
     private static final double WINDOW_WIDTH = 500;
     private static final String APP_NAME = "CopyPasteIwi";
     private static final String FXML_MAIN = "/fxml/main.fxml";
+    private static final String CSS_FILE = "/css/theme.css";
     private static final String IMAGES_APP_ICON = "/images/iwi_icon.png";
     private Stage stage;
 
@@ -26,18 +27,29 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.stage = primaryStage;
+        Parent root = initParent();
+        this.stage.setScene(initScene(root));
+        initBasicElements();
+        primaryStage.show();
+    }
 
+    private Parent initParent() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(FXML_MAIN));
-        Parent root = loader.load();
+        return loader.load();
+    }
 
-        this.stage.setScene(new Scene(root));
+    private Scene initScene(Parent root) {
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource(CSS_FILE).toExternalForm());
+        return scene;
+    }
+
+    private void initBasicElements() {
         this.stage.setTitle(APP_NAME);
         this.stage.getIcons().add(new Image(getClass().getResourceAsStream(IMAGES_APP_ICON)));
         setSize();
         pinWindow(true);
-
-        primaryStage.show();
     }
 
     private void setSize() {
