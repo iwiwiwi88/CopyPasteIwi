@@ -2,12 +2,29 @@
 
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.TextField?>
-<BorderPane
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<MenuBar
         xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="pl.iwi.copypaste.controllers.MenuBarController"
         fx:id="menuBar"
         id="menuBar">
-    <TextField text="Menu Bar"></TextField>
-</BorderPane>
+
+    <Menu fx:id="mFile" text="File">
+        <MenuItem text="Open"></MenuItem>
+        <MenuItem text="Save"></MenuItem>
+        <SeparatorMenuItem id="menuSeparator" />
+        <MenuItem text="Exit"></MenuItem>
+    </Menu>
+    <Menu fx:id="mTools" text="Tools">
+        <MenuItem text="Add new Tab"></MenuItem>
+        <MenuItem text="Settings"></MenuItem>
+    </Menu>
+    <Menu fx:id="mHelp" text="Help">
+        <MenuItem text="Help"></MenuItem>
+        <MenuItem text="About"></MenuItem>
+    </Menu>
+</MenuBar>

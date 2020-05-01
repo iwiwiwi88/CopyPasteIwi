@@ -8,7 +8,14 @@
             id="mainPane">
 
     <top>
-        <fx:include source="addButton.fxml"/>
+        <BorderPane>
+            <top>
+                <fx:include source="menuBar.fxml"/>
+            </top>
+            <bottom>
+                <fx:include source="addButton.fxml"/>
+            </bottom>
+        </BorderPane>
     </top>
 
     <center>
