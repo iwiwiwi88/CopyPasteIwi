@@ -46,7 +46,6 @@
  /** #### MENU BAR #### */
 .menu-bar {
   -fx-background-color: transparent;
-  -fx-border-color: -iwi-menu-selected-background-color;
 }
 
 .menu-button {
@@ -86,6 +85,20 @@
 .context-menu > * > .separator > .line {
   -fx-border-color: -iwi-menu-separator-color;
   -fx-border-width: 1;
+}
+
+#pin {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+}
+
+#pin > .label {
+  -fx-graphic: url("../images/pin.png");
+}
+
+#pin .accelerator-text {
+  -fx-graphic: none;
 }
 
  /** #### LABEL #### */

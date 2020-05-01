@@ -9,9 +9,12 @@
 
     <top>
         <BorderPane>
-            <top>
+            <left>
                 <fx:include source="menuBar.fxml"/>
-            </top>
+            </left>
+            <right>
+                <fx:include source="pinBar.fxml"/>
+            </right>
             <bottom>
                 <fx:include source="addButton.fxml"/>
             </bottom>
