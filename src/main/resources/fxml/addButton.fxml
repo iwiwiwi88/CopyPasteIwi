@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.Label?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="pl.iwi.copypaste.controllers.MainController"
@@ -15,7 +16,8 @@
       alignment="CENTER">
 
     <HBox spacing="5" minHeight="40" prefWidth="480" alignment="CENTER">
-        <TextField prefWidth="300" promptText="Text on button (up to 40 signs)" />
+        <Label text="Button name:" />
+        <TextField prefWidth="250" promptText="Text on button (up to 40 signs)" />
         <Button text="Add" prefWidth="60"/>
         <Button text="Clear" prefWidth="60"/>
     </HBox>

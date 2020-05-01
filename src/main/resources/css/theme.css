@@ -1,26 +1,77 @@
 * {
   -iwi-background-color: #B1F1ED;
-  -iwi-text-fill: #FD7C6F;
   -iwi-border-fill: #FD7C6F;
+  -iwi-separator-color: #FD7C6F;
+
+  -iwi-text-fill: #FD7C6F;
+  -iwi-textfield-background: white;
+  -iwi-textfield-border: #11CDDE;
+  -iwi-text-color: #3197E9;
 }
 
 #mainPane {
   -fx-background-color: -iwi-background-color;
 }
 
+.line {
+  -fx-border-color: -iwi-separator-color;
+  -fx-border-width: 2;
+  -fx-border-radius: 10;
+}
+
 .button {
   -fx-text-fill: -iwi-text-fill;
   -fx-font: normal 15 Langdon;
-  -fx-font-weight:bold;
-  -fx-background-color: -iwi-background-color;
+  -fx-background-color: transparent;
   -fx-border-width: 3px;
   -fx-border-style: solid;
   -fx-border-color: -iwi-border-fill;
   -fx-border-radius: 10;
-  -fx-background-radius: 20;
 }
 
 .button:hover {
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
 
+.label {
+  -fx-text-fill: -iwi-text-fill;
+  -fx-font: normal 15 Langdon;
+}
+
+.text-field, .text-area {
+  -fx-background-color: -iwi-textfield-background;
+  -fx-border-color: -iwi-textfield-border;
+  -fx-text-fill: -iwi-text-color;
+}
+
+.text-field:focused, .text-area:focused  {
+  -fx-border-width: 3px;
+  -fx-border-style: solid;
+  -fx-border-color: -iwi-textfield-border;
+  -fx-text-fill: -iwi-text-color;
+}
+
+.scroll-bar {
+	-fx-background-color: transparent;
+	-fx-border-color: -iwi-textfield-border;
+
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+.thumb {
+	-fx-background-color: -iwi-textfield-border;
+	-fx-border-color: -iwi-textfield-border;
+
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+.increment-button, .decrement-button {
+  -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+}
+
+.increment-arrow, .decrement-arrow {
+  -fx-border-color: -iwi-textfield-border
 }
