@@ -10,5 +10,5 @@
       id="buttonsFieldPane"
       spacing="5"
       alignment="CENTER">
-    <Label text=" Here will be the buttons field" prefWidth="300"/>
+    <Label fx:id="kotek" text=" Here will be the buttons field" prefWidth="300"/>
 </VBox>

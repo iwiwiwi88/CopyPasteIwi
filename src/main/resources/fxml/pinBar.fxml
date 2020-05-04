@@ -5,8 +5,8 @@
 <?import javafx.scene.control.Menu?>
 <MenuBar xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         fx:controller="pl.iwi.copypaste.controllers.MenuBarController"
-         fx:id="menuBar"
-         id="menuBar">
+         fx:controller="pl.iwi.copypaste.controllers.PinBarController"
+         fx:id="pinBar"
+         id="pinBar">
     <Menu fx:id="mPin" id="pin"/>
 </MenuBar>

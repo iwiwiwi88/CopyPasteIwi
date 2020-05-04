@@ -10,22 +10,22 @@
     <top>
         <BorderPane>
             <left>
-                <fx:include source="menuBar.fxml"/>
+                <fx:include fx:id="iMenuBar" source="menuBar.fxml"/>
             </left>
             <right>
-                <fx:include source="pinBar.fxml"/>
+                <fx:include fx:id="iPinBar" source="pinBar.fxml"/>
             </right>
             <bottom>
-                <fx:include source="addButton.fxml"/>
+                <fx:include fx:id="iAddButton" source="addButton.fxml"/>
             </bottom>
         </BorderPane>
     </top>
 
     <center>
-        <fx:include source="buttonsField.fxml"/>
+        <fx:include fx:id="iButtonsField" source="buttonsField.fxml"/>
     </center>
 
     <bottom>
-        <fx:include source="editText.fxml"/>
+        <fx:include fx:id="iEditText" source="editText.fxml"/>
     </bottom>
 </BorderPane>

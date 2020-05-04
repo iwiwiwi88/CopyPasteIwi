@@ -10,19 +10,18 @@
 <?import javafx.scene.control.Label?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.iwi.copypaste.controllers.MainController"
-      fx:id="addButtonPane"
+      fx:controller="pl.iwi.copypaste.controllers.AddButtonController"
       id="addButtonPane"
       alignment="CENTER">
 
     <HBox spacing="5" minHeight="40" prefWidth="480" alignment="CENTER">
-        <Label text="Button name:" />
-        <TextField prefWidth="250" promptText="Text on button (up to 40 signs)" />
-        <Button text="Add" prefWidth="60"/>
-        <Button text="Clear" prefWidth="60"/>
+        <Label text="Button name:"/>
+        <TextField fx:id="buttonName" prefWidth="250" promptText="Text on button (up to 40 signs)"/>
+        <Button text="Add" prefWidth="60" onAction="#addNewButton"/>
+        <Button text="Clear" prefWidth="60" onAction="#clearAddButtonForm"/>
     </HBox>
     <HBox minHeight="100" prefWidth="480" alignment="CENTER">
-        <TextArea prefWidth="480" prefHeight="100" promptText="Text to be copied..."/>
+        <TextArea fx:id="textToBeCopied" prefWidth="480" prefHeight="100" promptText="Text to be copied..."/>
     </HBox>
 
     <Separator maxWidth="480" minHeight="10"/>
