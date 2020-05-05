@@ -33,7 +33,7 @@ public class AddButtonController implements Initializable {
             ControllerMediator.getInstance()
                     .buttonsFieldController_addButton(buttonNameText, phraseToBeCopied);
         } else {
-            Alert alert = provideWaringAlert("Empty values", "Add button issue",
+            Alert alert = provideWarningAlert("Empty values", "Add button issue",
                     "Both 'Button name' and it's 'Text to be copied' should not be empty");
             showOnTopAndWait(alert);
         }

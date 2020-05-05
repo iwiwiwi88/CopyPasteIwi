@@ -5,27 +5,28 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="pl.iwi.copypaste.controllers.MainController"
+            fx:id="mainPane"
             id="mainPane">
 
     <top>
         <BorderPane>
             <left>
-                <fx:include fx:id="iMenuBar" source="menuBar.fxml"/>
+                <fx:include source="menuBar.fxml"/>
             </left>
             <right>
-                <fx:include fx:id="iPinBar" source="pinBar.fxml"/>
+                <fx:include source="pinBar.fxml"/>
             </right>
             <bottom>
-                <fx:include fx:id="iAddButton" source="addButton.fxml"/>
+                <fx:include source="addButton.fxml"/>
             </bottom>
         </BorderPane>
     </top>
 
     <center>
-        <fx:include fx:id="iButtonsField" source="buttonsField.fxml"/>
+        <fx:include source="buttonsField.fxml"/>
     </center>
 
     <bottom>
-        <fx:include fx:id="iEditText" source="editText.fxml"/>
+        <fx:include source="editText.fxml"/>
     </bottom>
 </BorderPane>

@@ -93,10 +93,6 @@
   -fx-border-width: 0;
 }
 
-#pin > .label {
-  -fx-graphic: url("../images/pin.png");
-}
-
 #pin .accelerator-text {
   -fx-graphic: none;
 }

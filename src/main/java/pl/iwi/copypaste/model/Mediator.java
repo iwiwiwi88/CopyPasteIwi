@@ -5,10 +5,12 @@ import pl.iwi.copypaste.controllers.*;
 import java.io.File;
 
 public interface Mediator {
-    // #### AddButtonController ####
+    void registerMainController(MainController controller);
+
+    void mainController_setAlwaysOnTop(boolean shouldBeOnTop);
+
     void registerAddButtonController(AddButtonController controller);
 
-    // #### ButtonsFieldController ####
     void registerButtonsFieldController(ButtonsFieldController controller);
 
     void buttonsFieldController_loadTabsAndButtons(File xmlFile);
@@ -17,18 +19,10 @@ public interface Mediator {
 
     void buttonsFieldController_addButton(String buttonName, String textToBeCopied);
 
-    // #### EditTextController ####
     void registerEditTextController(EditTextController controller);
 
-    void editTextController_setTextToBeEdited(String textToBeEdited);
-
-    // #### MenuBarController ####
     void registerMenuBarController(MenuBarController controller);
 
-    // #### PinBarController ####
     void registerPinBarController(PinBarController controller);
 
-    void PinBarController_setPinned();
-
-    void PinBarController_setPinned(boolean pinned);
 }

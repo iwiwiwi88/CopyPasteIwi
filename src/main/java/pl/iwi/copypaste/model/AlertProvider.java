@@ -13,7 +13,7 @@ import javafx.stage.StageStyle;
 
 public class AlertProvider {
 
-    public static Alert provideWaringAlert(String title, String header, String content) {
+    public static Alert provideWarningAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle(title);
         alert.setHeaderText(header);

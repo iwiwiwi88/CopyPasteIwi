@@ -49,7 +49,6 @@ public class App extends Application {
         this.stage.setTitle(APP_NAME);
         this.stage.getIcons().add(new Image(getClass().getResourceAsStream(IMAGES_APP_ICON)));
         setSize();
-        pinWindow(true);
     }
 
     private void setSize() {
@@ -62,12 +61,4 @@ public class App extends Application {
         this.stage.setResizable(false);
     }
 
-    public void pinWindow(boolean pinned) {
-        this.stage.setAlwaysOnTop(pinned);
-        // menu.setPin(pinned);
-    }
-
-    public void pinWindow() {
-        pinWindow(!this.stage.isAlwaysOnTop());
-    }
 }

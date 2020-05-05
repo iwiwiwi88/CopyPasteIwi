@@ -5,24 +5,32 @@ import pl.iwi.copypaste.controllers.*;
 import java.io.File;
 
 public class ControllerMediator implements Mediator {
+    private MainController mainController;
     private AddButtonController addButtonController;
     private ButtonsFieldController buttonsFieldController;
     private EditTextController editTextController;
     private MenuBarController menuBarController;
     private PinBarController pinBarController;
 
-    // #### AddButtonController ####
+    @Override
+    public void registerMainController(MainController controller) {
+        this.mainController = controller;
+    }
+
+    @Override
+    public void mainController_setAlwaysOnTop(boolean shouldBeOnTop) {
+        this.mainController.setAlwaysOnTop(shouldBeOnTop);
+    }
+
     @Override
     public void registerAddButtonController(AddButtonController controller) {
         this.addButtonController = controller;
     }
 
-    // #### ButtonsFieldController ####
     @Override
     public void registerButtonsFieldController(ButtonsFieldController controller) {
         this.buttonsFieldController = controller;
     }
-
     @Override
     public void buttonsFieldController_loadTabsAndButtons(File xmlFile) {
         this.buttonsFieldController.loadTabsAndButtons(xmlFile);
@@ -38,37 +46,19 @@ public class ControllerMediator implements Mediator {
         this.buttonsFieldController.addButton(buttonName, textToBeCopied);
     }
 
-    // #### EditTextController ####
     @Override
     public void registerEditTextController(EditTextController controller) {
         this.editTextController = controller;
     }
 
     @Override
-    public void editTextController_setTextToBeEdited(String textToBeEdited) {
-
-    }
-
-    // #### MenuBarController ####
-    @Override
     public void registerMenuBarController(MenuBarController controller) {
         this.menuBarController = controller;
     }
 
-    // #### PinBarController ####
     @Override
     public void registerPinBarController(PinBarController controller) {
         this.pinBarController = controller;
-    }
-
-    @Override
-    public void PinBarController_setPinned() {
-        this.pinBarController.setPinned();
-    }
-
-    @Override
-    public void PinBarController_setPinned(boolean pinned) {
-        this.pinBarController.setPinned(pinned);
     }
 
     // SINGLETON
