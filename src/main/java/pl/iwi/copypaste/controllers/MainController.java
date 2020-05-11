@@ -2,7 +2,9 @@ package pl.iwi.copypaste.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import pl.iwi.copypaste.model.ControllerMediator;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import pl.iwi.copypaste.model.MotherController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,22 +12,32 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML
-    public MenuBarController menuBarController;
+    public BorderPane mainPane;
     @FXML
-    public PinBarController pinBarController;
+    private MenuBarController menuBarController;
     @FXML
-    public AddButtonController addButtonController;
+    private PinBarController pinBarController;
     @FXML
-    public ButtonsFieldController buttonsFieldController;
+    private AddButtonController addButtonController;
     @FXML
-    public EditTextController editTextController;
+    private ButtonsFieldController buttonsFieldController;
+    @FXML
+    private EditTextController editTextController;
+
+    private MotherController motherController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ControllerMediator.getInstance().registerAddButtonController(addButtonController);
-        ControllerMediator.getInstance().registerButtonsFieldController(buttonsFieldController);
-        ControllerMediator.getInstance().registerEditTextController(editTextController);
-        ControllerMediator.getInstance().registerMenuBarController(menuBarController);
-        ControllerMediator.getInstance().registerPinBarController(pinBarController);
+        motherController = MotherController.get();
+        motherController.registerMainController(this);
+        motherController.registerAddButtonController(addButtonController);
+        motherController.registerButtonsFieldController(buttonsFieldController);
+        motherController.registerEditTextController(editTextController);
+        motherController.registerMenuBarController(menuBarController);
+        motherController.registerPinBarController(pinBarController);
+    }
+
+    public void setAlwaysOnTop(boolean shouldBeOnTop) {
+        ((Stage) mainPane.getScene().getWindow()).setAlwaysOnTop(shouldBeOnTop);
     }
 }

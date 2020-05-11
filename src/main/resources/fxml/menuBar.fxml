@@ -10,7 +10,6 @@
         xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="pl.iwi.copypaste.controllers.MenuBarController"
-        fx:id="menuBar"
         id="menuBar">
 
     <Menu fx:id="mFile" text="File">
