@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import pl.iwi.copypaste.model.MotherController;
 
 import java.net.URL;
 import java.util.ResourceBundle;

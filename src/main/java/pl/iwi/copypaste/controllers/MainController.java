@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import pl.iwi.copypaste.model.MotherController;
 
 import java.net.URL;
 import java.util.ResourceBundle;

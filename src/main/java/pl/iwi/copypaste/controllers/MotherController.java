@@ -1,6 +1,4 @@
-package pl.iwi.copypaste.model;
-
-import pl.iwi.copypaste.controllers.*;
+package pl.iwi.copypaste.controllers;
 
 import java.io.File;
 
