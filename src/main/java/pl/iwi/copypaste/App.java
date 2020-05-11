@@ -48,6 +48,7 @@ public class App extends Application {
     private void initBasicElements() {
         this.stage.setTitle(APP_NAME);
         this.stage.getIcons().add(new Image(getClass().getResourceAsStream(IMAGES_APP_ICON)));
+        this.stage.setAlwaysOnTop(true);
         setSize();
     }
 

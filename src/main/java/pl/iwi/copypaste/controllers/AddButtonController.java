@@ -5,7 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import pl.iwi.copypaste.model.ControllerMediator;
+import pl.iwi.copypaste.model.MotherController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,8 +30,7 @@ public class AddButtonController implements Initializable {
         String buttonNameText = buttonName.getText();
         String phraseToBeCopied = textToBeCopied.getText();
         if (buttonNameText.trim().length() > 0 && phraseToBeCopied.trim().length() > 0) {
-            ControllerMediator.getInstance()
-                    .buttonsFieldController_addButton(buttonNameText, phraseToBeCopied);
+            MotherController.get().addButton(buttonNameText, phraseToBeCopied);
         } else {
             Alert alert = provideWarningAlert("Empty values", "Add button issue",
                     "Both 'Button name' and it's 'Text to be copied' should not be empty");

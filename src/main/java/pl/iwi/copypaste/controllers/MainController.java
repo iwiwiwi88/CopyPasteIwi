@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import pl.iwi.copypaste.model.ControllerMediator;
+import pl.iwi.copypaste.model.MotherController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,18 +24,20 @@ public class MainController implements Initializable {
     @FXML
     private EditTextController editTextController;
 
+    private MotherController motherController;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ControllerMediator.getInstance().registerMainController(this);
-        ControllerMediator.getInstance().registerAddButtonController(addButtonController);
-        ControllerMediator.getInstance().registerButtonsFieldController(buttonsFieldController);
-        ControllerMediator.getInstance().registerEditTextController(editTextController);
-        ControllerMediator.getInstance().registerMenuBarController(menuBarController);
-        ControllerMediator.getInstance().registerPinBarController(pinBarController);
+        motherController = MotherController.get();
+        motherController.registerMainController(this);
+        motherController.registerAddButtonController(addButtonController);
+        motherController.registerButtonsFieldController(buttonsFieldController);
+        motherController.registerEditTextController(editTextController);
+        motherController.registerMenuBarController(menuBarController);
+        motherController.registerPinBarController(pinBarController);
     }
 
     public void setAlwaysOnTop(boolean shouldBeOnTop) {
-        ((Stage) mainPane.getParent().getScene().getWindow())
-                .setAlwaysOnTop(shouldBeOnTop);
+        ((Stage) mainPane.getScene().getWindow()).setAlwaysOnTop(shouldBeOnTop);
     }
 }
