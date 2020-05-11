@@ -1,19 +1,18 @@
 * {
   -iwi-base-background-color: #B1F1ED;
-  -iwi-separator-color: #FD7C6F;
-
+  -iwi-base-line-color: #FD7C6F;
   -iwi-base-text-fill-color: #FD7C6F;
+  -iwi-button-selected-color: #11CDDE;
+
   -iwi-textfield-background-color: white;
   -iwi-textfield-border-color: #11CDDE;
   -iwi-text-input-color: #3197E9;
 
-  -iwi-button-selected-color: #11CDDE;
-
-  -iwi-menu-border-color: #FD7C6F;
-  -iwi-menu-separator-color: #FD7C6F;
-  -iwi-menu-background-color: #B1F1ED;
-  -iwi-menu-selected-background-color: #11CDDE;
-  -iwi-menu-text-fill-color: #FD7C6F;
+  -iwi-menu-border-color: -iwi-base-line-color;
+  -iwi-menu-separator-color: -iwi-base-line-color;
+  -iwi-menu-background-color: -iwi-base-background-color;
+  -iwi-menu-selected-background-color: -iwi-button-selected-color;
+  -iwi-menu-text-fill-color: -iwi-base-text-fill-color;
 }
 
 #mainPane {
@@ -21,7 +20,7 @@
 }
 
 .separator .line {
-  -fx-border-color: -iwi-separator-color;
+  -fx-border-color: -iwi-base-line-color;
   -fx-border-width: 2;
   -fx-border-radius: 10;
 }
@@ -83,7 +82,7 @@
 }
 
 .context-menu > * > .separator > .line {
-  -fx-border-color: -iwi-menu-separator-color;
+  -fx-border-color: -iwi-base-line-color;
   -fx-border-width: 1;
 }
 
