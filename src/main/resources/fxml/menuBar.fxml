@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+
+<?import javafx.scene.control.ToggleGroup?>
 <MenuBar
         xmlns="http://javafx.com/javafx"
         xmlns:fx="http://javafx.com/fxml"
         fx:controller="pl.iwi.copypaste.controllers.MenuBarController"
         id="menuBar">
 
+    <fx:define>
+        <ToggleGroup fx:id="colorTheme"/>
+    </fx:define>
     <Menu fx:id="mFile" text="File">
-        <MenuItem text="Open"></MenuItem>
-        <MenuItem text="Save"></MenuItem>
-        <SeparatorMenuItem id="menuSeparator" />
-        <MenuItem text="Exit"></MenuItem>
+        <MenuItem text="Open"/>
+        <MenuItem text="Save"/>
+        <SeparatorMenuItem id="menuSeparator"/>
+        <MenuItem text="Exit"/>
     </Menu>
     <Menu fx:id="mTools" text="Tools">
-        <MenuItem text="Add new Tab"></MenuItem>
-        <MenuItem text="Settings"></MenuItem>
+        <MenuItem text="Add new Tab"/>
+        <Menu text="ColorTheme">
+            <RadioMenuItem toggleGroup="$colorTheme" text="Grey" onAction="#setColorTheme" selected="true"/>
+            <RadioMenuItem toggleGroup="$colorTheme" text="Dracula" onAction="#setColorTheme"/>
+            <RadioMenuItem toggleGroup="$colorTheme" text="Coral" onAction="#setColorTheme"/>
+        </Menu>
     </Menu>
     <Menu fx:id="mHelp" text="Help">
-        <MenuItem text="Help"></MenuItem>
-        <MenuItem text="About"></MenuItem>
+        <MenuItem text="Help"/>
+        <MenuItem text="About"/>
     </Menu>
 </MenuBar>

@@ -11,13 +11,12 @@ import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import static pl.iwi.copypaste.model.utils.ResourcesConstants.*;
+
 public class App extends Application {
 
     private static final double WINDOW_WIDTH = 500;
     private static final String APP_NAME = "CopyPasteIwi";
-    private static final String FXML_MAIN = "/fxml/main.fxml";
-    private static final String CSS_FILE = "/css/theme.css";
-    private static final String IMAGES_APP_ICON = "/images/iwi_icon.png";
     private Stage stage;
 
     public static void main(String[] args) {
@@ -41,7 +40,8 @@ public class App extends Application {
 
     private Scene initScene(Parent root) {
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource(CSS_FILE).toExternalForm());
+        scene.getStylesheets().addAll(getClass().getResource(CSS_FILE).toExternalForm(),
+                getClass().getResource(CSS_FILE_WITH_VARS).toExternalForm());
         return scene;
     }
 

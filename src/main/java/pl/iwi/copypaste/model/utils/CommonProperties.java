@@ -1,4 +1,4 @@
-package pl.iwi.copypaste.model;
+package pl.iwi.copypaste.model.utils;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

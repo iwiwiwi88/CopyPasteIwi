@@ -1,5 +1,8 @@
 package pl.iwi.copypaste.controllers;
 
+import pl.iwi.copypaste.model.tools.colortheme.ColorTheme;
+import pl.iwi.copypaste.model.tools.colortheme.ColorThemeProvider;
+
 import java.io.File;
 
 public class MotherController {
@@ -13,6 +16,10 @@ public class MotherController {
     public void setAlwaysOnTop(boolean shouldBeOnTop) {
         this.mainController.setAlwaysOnTop(shouldBeOnTop);
         this.pinBarController.setPinned(shouldBeOnTop);
+    }
+
+    public void setColorTheme(String colorThemeName) {
+        mainController.setColorTheme(colorThemeName);
     }
 
     public void loadTabsAndButtons(File xmlFile) {

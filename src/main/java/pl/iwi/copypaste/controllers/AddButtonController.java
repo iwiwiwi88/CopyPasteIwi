@@ -9,9 +9,9 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static pl.iwi.copypaste.model.AlertProvider.*;
-import static pl.iwi.copypaste.model.AlertProvider.showOnTopAndWait;
-import static pl.iwi.copypaste.model.CommonProperties.addTextLimiter;
+import static pl.iwi.copypaste.model.utils.AlertProvider.*;
+import static pl.iwi.copypaste.model.utils.AlertProvider.showOnTopAndWait;
+import static pl.iwi.copypaste.model.utils.CommonProperties.addTextLimiter;
 
 public class AddButtonController implements Initializable {
     @FXML
