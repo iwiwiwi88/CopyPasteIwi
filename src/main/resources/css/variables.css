@@ -1,0 +1,10 @@
+* {
+  -iwi-base-background-color: #B1F1ED;
+  -iwi-base-line-color: #FD7C6F;
+  -iwi-base-text-fill-color: #FD7C6F;
+  -iwi-button-selected-color: #11CDDE;
+
+  -iwi-textfield-background-color: white;
+  -iwi-textfield-border-color: #11CDDE;
+  -iwi-text-input-color: #3197E9;
+}

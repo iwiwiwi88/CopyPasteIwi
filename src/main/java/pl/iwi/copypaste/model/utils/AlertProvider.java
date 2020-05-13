@@ -1,4 +1,4 @@
-package pl.iwi.copypaste.model;
+package pl.iwi.copypaste.model.utils;
 
 import javafx.geometry.Insets;
 import javafx.scene.Group;
